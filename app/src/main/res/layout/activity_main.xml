@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:padding="16sp"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/txtInput"
+        android:layout_width="160sp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10sp"
+        android:hint="@string/hintName"
+        android:textColorHint="@color/grey"
+        android:autofillHints="amount"
+        android:inputType="numberDecimal"
+        android:padding="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/qnTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10sp"
+        android:padding="10sp"
+        android:text="@string/question"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtInput"/>
+
+    <RadioGroup
+        android:id="@+id/tip_options"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="13sp"
+        android:orientation="vertical"
+        android:checkedButton="@id/optionTwenty"
+        android:padding="10sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/qnTxt">
+
+        <RadioButton
+            android:id="@+id/optionTwenty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10sp"
+            android:padding="10sp"
+            android:text="@string/option_one"
+            android:textSize="16sp"
+            android:textColor="@color/black"/>
+
+        <RadioButton
+            android:id="@+id/optionFifteen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10sp"
+            android:padding="10sp"
+            android:text="@string/option_two"
+            android:textColor="@color/black"
+            android:textSize="16sp"/>
+
+        <RadioButton
+            android:id="@+id/optionTen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10sp"
+            android:padding="10sp"
+            android:text="@string/option_three"
+            android:textColor="@color/black"
+            android:textSize="16sp"/>
+
+    </RadioGroup>
+
+    <Switch
+        android:id="@+id/roundSwitch"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="13sp"
+        android:checked="true"
+        android:paddingTop="5sp"
+        android:paddingBottom="5sp"
+        android:text="@string/round_txt"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tip_options"
+        tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+    <Button
+        android:id="@+id/calcButton"
+        android:layout_width="0sp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="13sp"
+        android:text="@string/btnText"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/roundSwitch" />
+
+    <TextView
+        android:id="@+id/tipAmt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10sp"
+        android:paddingTop="5sp"
+        android:paddingBottom="5sp"
+        tools:text="Tip amount: $10"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/calcButton" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
